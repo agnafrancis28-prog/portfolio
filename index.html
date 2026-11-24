@@ -1,0 +1,448 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Agna Francis | Student Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #ffffff;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            font-size: 23px;
+            font-weight: 700;
+            color: #2563eb;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #475569;
+            margin-left: 25px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: #2563eb;
+        }
+
+        .hero {
+            min-height: 580px;
+            padding: 100px 8%;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(120deg, #eff6ff, #ffffff);
+        }
+
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .hero-tag {
+            color: #2563eb;
+            font-weight: 700;
+            letter-spacing: 2px;
+            font-size: 13px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 7vw, 68px);
+            line-height: 1.15;
+            margin: 20px 0;
+            color: #0f172a;
+        }
+
+        .hero h1 span {
+            color: #2563eb;
+        }
+
+        .hero p {
+            color: #64748b;
+            font-size: 18px;
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 25px;
+            background: #2563eb;
+            color: white;
+            border-radius: 7px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #1d4ed8;
+            transform: translateY(-3px);
+        }
+
+        section {
+            padding: 85px 8%;
+        }
+
+        .section-title {
+            font-size: 32px;
+            color: #0f172a;
+            margin-bottom: 12px;
+        }
+
+        .section-subtitle {
+            color: #64748b;
+            margin-bottom: 40px;
+        }
+
+        .about {
+            background: white;
+        }
+
+        .about-content {
+            max-width: 850px;
+            color: #64748b;
+            font-size: 17px;
+        }
+
+        .education-card,
+        .project-card,
+        .skill-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            transition: 0.3s;
+        }
+
+        .education-card {
+            max-width: 650px;
+        }
+
+        .education-card:hover,
+        .project-card:hover,
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+        }
+
+        .education-card h3,
+        .project-card h3 {
+            color: #1e40af;
+            margin-bottom: 8px;
+        }
+
+        .education-card p,
+        .project-card p {
+            color: #64748b;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 18px;
+        }
+
+        .skill-card {
+            text-align: center;
+            font-weight: 600;
+            color: #334155;
+        }
+
+        .skill-card span {
+            display: block;
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 22px;
+        }
+
+        .project-card {
+            min-height: 160px;
+        }
+
+        .contact {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+        }
+
+        .contact .section-title {
+            color: white;
+        }
+
+        .contact p {
+            color: #cbd5e1;
+            margin-bottom: 25px;
+        }
+
+        .contact a {
+            color: white;
+        }
+
+        footer {
+            background: #020617;
+            color: #94a3b8;
+            padding: 22px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+
+            nav a {
+                margin: 0;
+                font-size: 12px;
+            }
+
+            .hero {
+                min-height: 450px;
+                padding: 70px 7%;
+            }
+
+            section {
+                padding: 65px 7%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header>
+        <div class="logo">AF.</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+
+    <!-- HOME -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+
+            <div class="hero-tag">WELCOME TO MY PORTFOLIO</div>
+
+            <h1>
+                Hi, I'm <span>Agna Francis.</span>
+            </h1>
+
+            <p>
+                An Integrated MCA student at Rajagiri College of
+                Social Sciences, passionate about technology,
+                learning new skills and exploring creative ideas.
+            </p>
+
+            <a href="#about" class="btn">Discover More</a>
+
+        </div>
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+
+        <h2 class="section-title">About Me</h2>
+
+        <p class="section-subtitle">
+            Get to know me better
+        </p>
+
+        <div class="about-content">
+            <p>
+                Hello! I'm Agna Francis, an Integrated Master of
+                Computer Applications (IMCA) student at Rajagiri
+                College of Social Sciences.
+
+                I am interested in exploring the world of technology
+                and continuously developing my knowledge in
+                computer applications and programming.
+
+                I believe in continuous learning, creativity and
+                improving myself through new experiences.
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- EDUCATION -->
+    <section id="education">
+
+        <h2 class="section-title">Education</h2>
+
+        <p class="section-subtitle">
+            My academic journey
+        </p>
+
+        <div class="education-card">
+
+            <h3>Integrated Master of Computer Applications</h3>
+
+            <p>Rajagiri College of Social Sciences</p>
+
+            <p>Kerala, India</p>
+
+            <p>Currently Pursuing</p>
+
+        </div>
+
+    </section>
+
+
+    <!-- SKILLS -->
+    <section class="about" id="skills">
+
+        <h2 class="section-title">My Skills</h2>
+
+        <p class="section-subtitle">
+            Skills I am developing
+        </p>
+
+        <div class="skills-grid">
+
+            <div class="skill-card">
+                <span>💻</span>
+                Python
+            </div>
+
+            <div class="skill-card">
+                <span>☕</span>
+                Java
+            </div>
+
+            <div class="skill-card">
+                <span>⌨️</span>
+                C Programming
+            </div>
+
+            <div class="skill-card">
+                <span>🌐</span>
+                HTML & CSS
+            </div>
+
+            <div class="skill-card">
+                <span>🗄️</span>
+                SQL
+            </div>
+
+            <div class="skill-card">
+                <span>🧩</span>
+                Problem Solving
+            </div>
+
+            <div class="skill-card">
+                <span>🤝</span>
+                Teamwork
+            </div>
+
+            <div class="skill-card">
+                <span>💬</span>
+                Communication
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJECTS -->
+    <section id="projects">
+
+        <h2 class="section-title">My Projects</h2>
+
+        <p class="section-subtitle">
+            A collection of my academic and personal work
+        </p>
+
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <h3>Projects Coming Soon</h3>
+
+                <p>
+                    Exciting projects and practical applications
+                    will be showcased here.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+
+        <h2 class="section-title">Let's Connect</h2>
+
+        <p>
+            Feel free to reach out for opportunities,
+            collaborations or a friendly conversation.
+        </p>
+
+        <a href="mailto:agnafrancis28@gmail.com" class="btn">
+            Contact Me
+        </a>
+
+        <p style="margin-top:25px;">
+            agnafrancis28@gmail.com
+        </p>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        © 2026 Agna Francis. All Rights Reserved.
+    </footer>
+
+</body>
+</html>
